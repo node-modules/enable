@@ -26,4 +26,12 @@ describe('enable.test.js', function () {
       enable.generator.should.equal(false);
     }
   });
+
+  it('should detect let', function () {
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.let.should.equal(true);
+    } else if (process.version.indexOf('v0.8.') === 0) {
+      enable.let.should.equal(false);
+    }
+  });
 });
