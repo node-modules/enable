@@ -45,6 +45,7 @@ if (enable.generator) {
 ## Features
 
 * `enable.generator`: generator enable or not
+* `enable.let`: support `let a;` or not
 
 ## Test
 
