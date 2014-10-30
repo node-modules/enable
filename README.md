@@ -38,11 +38,15 @@ $ npm install enable --save
 var enable = require('enable');
 
 if (enable.generator) {
-  console.log('support generator');
+  console.log('supports generator');
 }
 
 if (enable.let) {
-  console.log('support let a = 1;');
+  console.log('supports `let a = 1;`');
+}
+
+if (enable.const) {
+	console.log('supports `const salary = 0;`')
 }
 ```
 
