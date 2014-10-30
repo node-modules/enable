@@ -1,6 +1,6 @@
 {
   "name": "enable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Detect es6 features enable or not.",
   "main": "index.js",
   "scripts": {
