@@ -46,7 +46,7 @@ if (enable.let) {
 }
 
 if (enable.const) {
-	console.log('supports `const salary = 0;`')
+  console.log('supports `const salary = 0;`')
 }
 ```
 
@@ -58,7 +58,11 @@ Detect generator enable or not
 
 ### .let
 
-support `let a;` or not
+Supports `let a;` or not
+
+### .const
+
+Supports `const a = 1;` or not
 
 ## Test
 
