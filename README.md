@@ -40,12 +40,21 @@ var enable = require('enable');
 if (enable.generator) {
   console.log('support generator');
 }
+
+if (enable.let) {
+  console.log('support let a = 1;');
+}
 ```
 
-## Features
+## API
 
-* `enable.generator`: generator enable or not
-* `enable.let`: support `let a;` or not
+### .generator
+
+Detect generator enable or not
+
+### .let
+
+support `let a;` or not
 
 ## Test
 
