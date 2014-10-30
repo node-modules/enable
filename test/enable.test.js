@@ -14,7 +14,6 @@
  * Module dependencies.
  */
 
-var should = require('should');
 var enable = require('../');
 
 describe('enable.test.js', function () {
@@ -28,10 +27,9 @@ describe('enable.test.js', function () {
   });
 
   it('should detect let', function () {
+    enable.let.should.be.a.Boolean;
     if (process.version.indexOf('v0.10.') === 0) {
       enable.let.should.equal(true);
-    } else if (process.version.indexOf('v0.8.') === 0) {
-      enable.let.should.equal(false);
     }
   });
 });
