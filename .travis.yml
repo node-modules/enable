@@ -3,5 +3,6 @@ node_js:
   - '0.8'
   - '0.11'
   - '0.10'
-script: "npm run test-travis"
-after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
+before_script: "npm install npm"
+script: "node_modules/.bin/npm run test-travis"
+after_script: "node_modules/.bin/npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
