@@ -32,3 +32,12 @@ try {
 } catch (_) {
   exports.let = false;
 }
+
+// const
+try {
+  eval('(function () { const fubar = 42; return typeof fubar === "number"; }())');
+  exports.const = true;
+} catch (_) {
+  exports.const = false;
+}
+

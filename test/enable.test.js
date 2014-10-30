@@ -32,4 +32,11 @@ describe('enable.test.js', function () {
       enable.let.should.equal(true);
     }
   });
+
+  it("should detect const", function() {
+    enable.const.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.const.should.equal(true);
+    }
+  });
 });
