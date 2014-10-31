@@ -1,4 +1,9 @@
 
+1.2.0 / 2014-10-31
+==================
+
+ * feat: Supports Object.{is,assign,getOwnPropertySymbols,setPrototypeOf}
+
 1.1.0 / 2014-10-30
 ==================
 
