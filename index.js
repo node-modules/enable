@@ -41,3 +41,10 @@ try {
   exports.const = false;
 }
 
+// Object.{is,assign,getOwnPropertySymbols,setPrototypeOf}
+exports.Object = {
+  is: typeof Object.is === 'function',
+  assign: typeof Object.assign === 'function',
+  getOwnPropertySymbols: typeof Object.getOwnPropertySymbols === 'function',
+  setPrototypeOf: typeof Object.setPrototypeOf === 'function'
+};

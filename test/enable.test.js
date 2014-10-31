@@ -39,4 +39,41 @@ describe('enable.test.js', function () {
       enable.const.should.equal(true);
     }
   });
+
+  it("should detect Object.is", function() {
+    enable.Object.is.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.Object.is.should.equal(true);
+    }
+  });
+
+  it("should detect Object.assign", function() {
+    enable.Object.assign.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.Object.assign.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Object.assign.should.equal(false);
+    }
+  });
+
+  it("should detect Object.getOwnPropertySymbols", function() {
+    enable.Object.getOwnPropertySymbols.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.Object.getOwnPropertySymbols.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Object.getOwnPropertySymbols.should.equal(true);
+    }
+  });
+
+  it("should detect Object.setPrototypeOf", function() {
+    enable.Object.setPrototypeOf.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.Object.setPrototypeOf.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Object.setPrototypeOf.should.equal(true);
+    }
+  });
 });

@@ -24,7 +24,8 @@ enable
 [download-image]: https://img.shields.io/npm/dm/enable.svg?style=flat-square
 [download-url]: https://npmjs.org/package/enable
 
-Detect es6 features enable or not.
+Detect [es6](http://kangax.github.io/compat-table/es6) and [es7](http://kangax.github.io/compat-table/es7)
+features enable or not.
 
 ## Install
 
@@ -38,7 +39,7 @@ $ npm install enable --save
 var enable = require('enable');
 
 if (enable.generator) {
-  console.log('supports generator');
+  console.log('supports generator: `function* a() {}`');
 }
 
 if (enable.let) {
@@ -48,21 +49,23 @@ if (enable.let) {
 if (enable.const) {
   console.log('supports `const salary = 0;`')
 }
+
+if (enable.Object.is) {
+  console.log('supports `Object.is();`');
+}
+
+if (enable.Object.assign) {
+  console.log('supports `Object.assign();`');
+}
+
+if (enable.Object.getOwnPropertySymbols) {
+  console.log('supports `Object.getOwnPropertySymbols();`');
+}
+
+if (enable.Object.setPrototypeOf) {
+  console.log('supports `Object.setPrototypeOf();`');
+}
 ```
-
-## API
-
-### .generator
-
-Detect generator enable or not
-
-### .let
-
-Supports `let a;` or not
-
-### .const
-
-Supports `const a = 1;` or not
 
 ## Test
 
