@@ -76,4 +76,85 @@ describe('enable.test.js', function () {
       enable.Object.setPrototypeOf.should.equal(true);
     }
   });
+
+  it("should detect String.raw", function() {
+    enable.String.raw.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.String.raw.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.String.raw.should.equal(false);
+    }
+  });
+
+  it("should detect String.fromCodePoint", function() {
+    enable.String.fromCodePoint.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.String.fromCodePoint.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.String.fromCodePoint.should.equal(false);
+    }
+  });
+
+  it("should detect String.prototype.codePointAt", function() {
+    enable.String.prototype.codePointAt.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.String.prototype.codePointAt.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.String.prototype.codePointAt.should.equal(false);
+    }
+  });
+
+  it("should detect String.prototype.normalize", function() {
+    enable.String.prototype.normalize.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.String.prototype.normalize.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.String.prototype.normalize.should.equal(true);
+    }
+  });
+
+  it("should detect String.prototype.repeat", function() {
+    enable.String.prototype.repeat.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.String.prototype.repeat.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.String.prototype.repeat.should.equal(true);
+    }
+  });
+
+  it("should detect String.prototype.startsWith", function() {
+    enable.String.prototype.startsWith.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.String.prototype.startsWith.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.String.prototype.startsWith.should.equal(true);
+    }
+  });
+
+  it("should detect String.prototype.endsWith", function() {
+    enable.String.prototype.endsWith.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.String.prototype.endsWith.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.String.prototype.endsWith.should.equal(true);
+    }
+  });
+
+  it("should detect String.prototype.contains", function() {
+    enable.String.prototype.contains.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.String.prototype.contains.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.String.prototype.contains.should.equal(true);
+    }
+  });
+
 });

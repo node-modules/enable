@@ -65,6 +65,43 @@ if (enable.Object.getOwnPropertySymbols) {
 if (enable.Object.setPrototypeOf) {
   console.log('supports `Object.setPrototypeOf();`');
 }
+
+if (enable.Object.setPrototypeOf) {
+  console.log('supports `Object.setPrototypeOf();`');
+}
+
+if (enable.String.raw) {
+  console.log('supports `String.raw();`');
+}
+
+if (enable.String.fromCodePoint) {
+  console.log('supports `String.fromCodePoint`');
+}
+
+if (enable.String.prototype.codePointAt) {
+  console.log('supports `String.prototype.codePointAt`');
+}
+
+if (enable.String.prototype.normalize) {
+  console.log('supports `String.prototype.normalize`');
+}
+
+if (enable.String.prototype.repeat) {
+  console.log('supports `String.prototype.repeat`');
+}
+
+if (enable.String.prototype.startsWith) {
+  console.log('supports `String.prototype.startsWith`');
+}
+
+if (enable.String.prototype.endsWith) {
+  console.log('supports `String.prototype.endsWith`');
+}
+
+if (enable.String.prototype.contains) {
+  console.log('supports `String.prototype.contains`');
+}
+
 ```
 
 ## Test
