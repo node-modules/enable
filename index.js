@@ -16,7 +16,7 @@
 * Helper functions.
 */
 
-function isFunction( attr ) {
+function isFunction(attr) {
   return typeof attr === 'function';
 }
 
@@ -52,22 +52,22 @@ try {
 
 // Object.{is,assign,getOwnPropertySymbols,setPrototypeOf}
 exports.Object = {
-  is: isFunction( Object.is ),
-  assign: isFunction( Object.assign ),
-  getOwnPropertySymbols: isFunction( Object.getOwnPropertySymbols ),
-  setPrototypeOf: isFunction( Object.setPrototypeOf )
+  is: isFunction(Object.is),
+  assign: isFunction(Object.assign),
+  getOwnPropertySymbols: isFunction(Object.getOwnPropertySymbols),
+  setPrototypeOf: isFunction(Object.setPrototypeOf)
 };
 
 // String methods.
 exports.String = {
-  raw: isFunction( String.raw ),
-  fromCodePoint: isFunction( String.fromCodePoint ),
+  raw: isFunction(String.raw),
+  fromCodePoint: isFunction(String.fromCodePoint),
   prototype:{
-    codePointAt: isFunction( String.prototype.codePointAt ),
-    normalize: isFunction( String.prototype.normalize ),
-    repeat: isFunction( String.prototype.repeat ),
-    startsWith: isFunction( String.prototype.startsWith ),
-    endsWith: isFunction( String.prototype.endsWith ),
-    contains: isFunction( String.prototype.contains )
+    codePointAt: isFunction(String.prototype.codePointAt),
+    normalize: isFunction(String.prototype.normalize),
+    repeat: isFunction(String.prototype.repeat),
+    startsWith: isFunction(String.prototype.startsWith),
+    endsWith: isFunction(String.prototype.endsWith),
+    contains: isFunction(String.prototype.contains)
   }
 };
