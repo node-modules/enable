@@ -157,4 +157,74 @@ describe('enable.test.js', function () {
     }
   });
 
+  it("should detect Number.isFinite", function(){
+  	enable.Number.isFinite.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Number.isFinite.should.equal(true);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Number.isFinite.should.equal(true);
+    }
+  });
+
+  it("should detect Number.isInteger", function(){
+  	enable.Number.isInteger.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Number.isInteger.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Number.isInteger.should.equal(true);
+    }
+  });
+
+  it("should detect Number.isSafeInteger", function(){
+  	enable.Number.isSafeInteger.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Number.isSafeInteger.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Number.isSafeInteger.should.equal(true);
+    }
+  });
+
+  it("should detect Number.isNaN", function(){
+  	enable.Number.isNaN.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Number.isNaN.should.equal(true);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Number.isNaN.should.equal(true);
+    }
+  });
+
+  it("should detect Number.EPSILON", function(){
+  	enable.Number.EPSILON.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Number.EPSILON.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Number.EPSILON.should.equal(true);
+    }
+  });
+
+  it("should detect Number.MIN_SAFE_INTEGER", function(){
+  	enable.Number.MIN_SAFE_INTEGER.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Number.MIN_SAFE_INTEGER.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Number.MIN_SAFE_INTEGER.should.equal(true);
+    }
+  });
+
+  it("should detect Number.MAX_SAFE_INTEGER", function(){
+  	enable.Number.MAX_SAFE_INTEGER.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Number.MAX_SAFE_INTEGER.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Number.MAX_SAFE_INTEGER.should.equal(true);
+    }
+  });
+
 });

@@ -98,6 +98,34 @@ if (enable.String.prototype.contains) {
   console.log('supports `String.prototype.contains`');
 }
 
+if (Number.isFinite) {
+  console.log('supports `Number.isFinite`');
+}
+
+if (Number.isInteger) {
+  console.log('supports `Number.isInteger`');
+}
+
+if (Number.isSafeInteger) {
+  console.log('supports `Number.isSafeInteger`');
+}
+
+if (Number.isNaN) {
+  console.log('supports `Number.isNaN`');
+}
+
+if (Number.EPSILON) {
+  console.log('supports `Number.EPSILON`');
+}
+
+if (Number.MIN_SAFE_INTEGER) {
+  console.log('supports `Number.MIN_SAFE_INTEGER`');
+}
+
+if (Number.MAX_SAFE_INTEGER) {
+  console.log('supports `Number.MAX_SAFE_INTEGER`');
+}
+
 ```
 
 ## Test
