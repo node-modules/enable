@@ -66,10 +66,6 @@ if (enable.Object.setPrototypeOf) {
   console.log('supports `Object.setPrototypeOf();`');
 }
 
-if (enable.Object.setPrototypeOf) {
-  console.log('supports `Object.setPrototypeOf();`');
-}
-
 if (enable.String.raw) {
   console.log('supports `String.raw();`');
 }
