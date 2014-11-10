@@ -20,6 +20,10 @@ function isFunction(attr) {
   return typeof attr === 'function';
 }
 
+function isNumber(attr) {
+  return typeof attr === 'number';
+}
+
 /**
  * Module dependencies.
  */
@@ -70,4 +74,14 @@ exports.String = {
     endsWith: isFunction(String.prototype.endsWith),
     contains: isFunction(String.prototype.contains)
   }
+};
+
+exports.Number = {
+  isFinite: isFunction(Number.isFinite),
+  isInteger: isFunction(Number.isInteger),	
+  isSafeInteger: isFunction(Number.isSafeInteger),
+  isNaN: isFunction(Number.isNaN),
+  EPSILON: isNumber(Number.EPSILON),
+  MIN_SAFE_INTEGER: isNumber(Number.MIN_SAFE_INTEGER),
+  MAX_SAFE_INTEGER: isNumber(Number.MAX_SAFE_INTEGER)
 };
