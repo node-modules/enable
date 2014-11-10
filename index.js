@@ -7,9 +7,18 @@
  * Authors:
  *   fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)
  *   dead_horse <dead_horse@qq.com> (http://github.com/dead-horse)
+ *   hemanth.hm <hemanth.hm@gmail.com> (http://h3manth.com)
  */
 
 'use strict';
+
+/**
+* Helper functions.
+*/
+
+function isFunction(attr) {
+  return typeof attr === 'function';
+}
 
 /**
  * Module dependencies.
@@ -43,8 +52,22 @@ try {
 
 // Object.{is,assign,getOwnPropertySymbols,setPrototypeOf}
 exports.Object = {
-  is: typeof Object.is === 'function',
-  assign: typeof Object.assign === 'function',
-  getOwnPropertySymbols: typeof Object.getOwnPropertySymbols === 'function',
-  setPrototypeOf: typeof Object.setPrototypeOf === 'function'
+  is: isFunction(Object.is),
+  assign: isFunction(Object.assign),
+  getOwnPropertySymbols: isFunction(Object.getOwnPropertySymbols),
+  setPrototypeOf: isFunction(Object.setPrototypeOf)
+};
+
+// String methods.
+exports.String = {
+  raw: isFunction(String.raw),
+  fromCodePoint: isFunction(String.fromCodePoint),
+  prototype:{
+    codePointAt: isFunction(String.prototype.codePointAt),
+    normalize: isFunction(String.prototype.normalize),
+    repeat: isFunction(String.prototype.repeat),
+    startsWith: isFunction(String.prototype.startsWith),
+    endsWith: isFunction(String.prototype.endsWith),
+    contains: isFunction(String.prototype.contains)
+  }
 };
