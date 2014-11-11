@@ -85,3 +85,23 @@ exports.Number = {
   MIN_SAFE_INTEGER: isNumber(Number.MIN_SAFE_INTEGER),
   MAX_SAFE_INTEGER: isNumber(Number.MAX_SAFE_INTEGER)
 };
+
+exports.Math = {
+  clz32: isFunction(Math.clz32),
+  imul: isFunction(Math.imul),
+  sign: isFunction(Math.sign),
+  log10: isFunction(Math.log10),
+  log2: isFunction(Math.log2),
+  log1p: isFunction(Math.log1p),
+  expm1: isFunction(Math.expm1),
+  cosh: isFunction(Math.cosh),
+  sinh: isFunction(Math.sinh),
+  tanh: isFunction(Math.tanh),	
+  acosh: isFunction(Math.acosh),	
+  asinh: isFunction(Math.asinh),	
+  atanh: isFunction(Math.atanh),
+  hypot: isFunction(Math.hypot),	
+  trunc: isFunction(Math.trunc),	
+  fround: isFunction(Math.fround),	
+  cbrt: isFunction(Math.cbrt)
+}
