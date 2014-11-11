@@ -38,95 +38,71 @@ $ npm install enable --save
 ```js
 var enable = require('enable');
 
+if (enable.<feature>) {
+  console.log(<feature> is supported);
+}
+
+/* Example:
 if (enable.generator) {
   console.log('supports generator: `function* a() {}`');
 }
-
-if (enable.let) {
-  console.log('supports `let a = 1;`');
-}
-
-if (enable.const) {
-  console.log('supports `const salary = 0;`')
-}
-
-if (enable.Object.is) {
-  console.log('supports `Object.is();`');
-}
-
-if (enable.Object.assign) {
-  console.log('supports `Object.assign();`');
-}
-
-if (enable.Object.getOwnPropertySymbols) {
-  console.log('supports `Object.getOwnPropertySymbols();`');
-}
-
-if (enable.Object.setPrototypeOf) {
-  console.log('supports `Object.setPrototypeOf();`');
-}
-
-if (enable.String.raw) {
-  console.log('supports `String.raw();`');
-}
-
-if (enable.String.fromCodePoint) {
-  console.log('supports `String.fromCodePoint`');
-}
-
-if (enable.String.prototype.codePointAt) {
-  console.log('supports `String.prototype.codePointAt`');
-}
-
-if (enable.String.prototype.normalize) {
-  console.log('supports `String.prototype.normalize`');
-}
-
-if (enable.String.prototype.repeat) {
-  console.log('supports `String.prototype.repeat`');
-}
-
-if (enable.String.prototype.startsWith) {
-  console.log('supports `String.prototype.startsWith`');
-}
-
-if (enable.String.prototype.endsWith) {
-  console.log('supports `String.prototype.endsWith`');
-}
-
-if (enable.String.prototype.contains) {
-  console.log('supports `String.prototype.contains`');
-}
-
-if (Number.isFinite) {
-  console.log('supports `Number.isFinite`');
-}
-
-if (Number.isInteger) {
-  console.log('supports `Number.isInteger`');
-}
-
-if (Number.isSafeInteger) {
-  console.log('supports `Number.isSafeInteger`');
-}
-
-if (Number.isNaN) {
-  console.log('supports `Number.isNaN`');
-}
-
-if (Number.EPSILON) {
-  console.log('supports `Number.EPSILON`');
-}
-
-if (Number.MIN_SAFE_INTEGER) {
-  console.log('supports `Number.MIN_SAFE_INTEGER`');
-}
-
-if (Number.MAX_SAFE_INTEGER) {
-  console.log('supports `Number.MAX_SAFE_INTEGER`');
-}
-
+*/
 ```
+
+## List of features:
+
+__Object related:__
+
+* Object.is
+* Object.assign
+* Object.getOwnPropertySymbols
+* Object.setPrototypeOf
+
+__String realted:__
+
+* String.raw
+* String.fromCodePoint
+* String.prototype.codePointAt
+* String.prototype.normalize
+* String.prototype.repeat
+* String.prototype.startsWith
+* String.prototype.endsWith
+* String.prototype.contains
+
+__Number realted:__
+
+* Number.isFinite
+* Number.isInteger
+* Number.isSafeInteger
+* Number.isNaN
+* Number.EPSILON
+* Number.MIN_SAFE_INTEGER
+
+__Math realted:__
+
+* Math.clz32
+* Math.imul
+* Math.sign
+* Math.log10
+* Math.log2
+* Math.log1p
+* Math.expm1
+* Math.cosh
+* Math.sinh
+* Math.tanh
+* Math.acosh
+* Math.asinh
+* Math.atanh
+* Math.hypot
+* Math.trunc
+* Math.fround
+* Math.cbrt
+
+__Others:__
+
+* generator
+* let
+* const
 
 ## Test
 
