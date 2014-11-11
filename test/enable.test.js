@@ -217,13 +217,173 @@ describe('enable.test.js', function () {
     }
   });
 
-  it("should detect Number.MAX_SAFE_INTEGER", function(){
-  	enable.Number.MAX_SAFE_INTEGER.should.be.a.Boolean;
+  it("should detect Math.clz32", function(){
+  	enable.Math.clz32.should.be.a.Boolean;
   	if (process.version.indexOf('v0.10.') === 0) {
-      enable.Number.MAX_SAFE_INTEGER.should.equal(false);
+      enable.Math.clz32.should.equal(false);
     }
     if (process.version.indexOf('v0.11.') === 0) {
-      enable.Number.MAX_SAFE_INTEGER.should.equal(true);
+      enable.Math.clz32.should.equal(true);
+    }
+  });
+
+  it("should detect Math.imul", function(){
+  	enable.Math.imul.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.imul.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.imul.should.equal(true);
+    }
+  });
+
+  it("should detect Math.sign", function(){
+  	enable.Math.sign.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.sign.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.sign.should.equal(true);
+    }
+  });
+
+  it("should detect Math.log10", function(){
+  	enable.Math.log10.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.log10.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.log10.should.equal(true);
+    }
+  });
+
+  it("should detect Math.log2", function(){
+  	enable.Math.log2.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.log2.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.log2.should.equal(true);
+    }
+  });
+
+  it("should detect Math.log1p", function(){
+  	enable.Math.log1p.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.log1p.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.log1p.should.equal(true);
+    }
+  });
+
+  it("should detect Math.expm1", function(){
+  	enable.Math.expm1.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.expm1.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.expm1.should.equal(true);
+    }
+  });
+
+  it("should detect Math.cosh", function(){
+  	enable.Math.cosh.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.cosh.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.cosh.should.equal(true);
+    }
+  });
+
+  it("should detect Math.sinh", function(){
+  	enable.Math.sinh.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.sinh.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.sinh.should.equal(true);
+    }
+  });
+
+  it("should detect Math.tanh", function(){
+  	enable.Math.tanh.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.tanh.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.tanh.should.equal(true);
+    }
+  });
+
+  it("should detect Math.acosh", function(){
+  	enable.Math.acosh.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.acosh.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.acosh.should.equal(true);
+    }
+  });
+
+  it("should detect Math.asinh", function(){
+  	enable.Math.asinh.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.asinh.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.asinh.should.equal(true);
+    }
+  });
+
+  it("should detect Math.atanh", function(){
+  	enable.Math.atanh.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.atanh.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.atanh.should.equal(true);
+    }
+  });
+
+  it("should detect Math.hypot", function(){
+  	enable.Math.hypot.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.hypot.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.hypot.should.equal(true);
+    }
+  });
+
+  it("should detect Math.trunc", function(){
+  	enable.Math.trunc.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.trunc.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.trunc.should.equal(true);
+    }
+  });
+
+  it("should detect Math.fround", function(){
+  	enable.Math.fround.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.fround.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.fround.should.equal(true);
+    }
+  });
+
+  it("should detect Math.cbrt", function(){
+  	enable.Math.cbrt.should.be.a.Boolean;
+  	if (process.version.indexOf('v0.10.') === 0) {
+      enable.Math.cbrt.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Math.cbrt.should.equal(true);
     }
   });
 
