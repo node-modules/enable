@@ -100,9 +100,10 @@ __Math realted:__
 
 __Others:__
 
-* generator
-* let
-* const
+* generator.
+* let.
+* const.
+* Promise.
 
 ## Test
 

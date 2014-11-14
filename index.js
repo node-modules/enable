@@ -104,4 +104,7 @@ exports.Math = {
   trunc: isFunction(Math.trunc),	
   fround: isFunction(Math.fround),	
   cbrt: isFunction(Math.cbrt)
-}
+};
+
+exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);
+

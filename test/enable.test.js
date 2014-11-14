@@ -6,6 +6,7 @@
  *
  * Authors:
  *   fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)
+ *   hemanth <hemanth.hm@gmail.com> (http://h3manth.com)
  */
 
 "use strict";
@@ -384,6 +385,16 @@ describe('enable.test.js', function () {
     }
     if (process.version.indexOf('v0.11.') === 0) {
       enable.Math.cbrt.should.equal(true);
+    }
+  });
+
+  it("should detect Promise", function(){
+  	enable.Promise.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.Promise.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Promise.should.equal(true);
     }
   });
 
