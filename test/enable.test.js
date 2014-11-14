@@ -398,4 +398,44 @@ describe('enable.test.js', function () {
     }
   });
 
+  it("should detect RegExp.prototype.match", function(){
+  	enable.RegExp.prototype.match.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.RegExp.prototype.match.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.RegExp.prototype.match.should.equal(false);
+    }
+  });
+
+  it("should detect RegExp.prototype.replace", function(){
+  	enable.RegExp.prototype.replace.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.RegExp.prototype.replace.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.RegExp.prototype.replace.should.equal(false);
+    }
+  });
+
+  it("should detect RegExp.prototype.split", function(){
+  	enable.RegExp.prototype.split.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.RegExp.prototype.split.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.RegExp.prototype.split.should.equal(false);
+    }
+  });
+
+  it("should detect RegExp.prototype.search", function(){
+  	enable.RegExp.prototype.search.should.be.a.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.RegExp.prototype.search.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.RegExp.prototype.search.should.equal(false);
+    }
+  });
+
 });

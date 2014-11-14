@@ -108,3 +108,8 @@ exports.Math = {
 
 exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);
 
+var RegExp = {'prototype' : {} };
+['match', 'replace', 'split', 'search'].forEach(function(regex){
+   RegExp.prototype[regex] = isFunction(regex);
+});
+exports.RegExp = RegExp;
