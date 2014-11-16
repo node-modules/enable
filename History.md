@@ -1,4 +1,9 @@
 
+2.0.0 / 2014-11-16
+==================
+* Regex realted methods.
+* Major revamp (@hemanth)
+
 1.3.2 / 2014-11-11
 ==================
 * Math realted methods.
