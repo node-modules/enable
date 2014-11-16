@@ -54,62 +54,49 @@ try {
   exports.const = false;
 }
 
-// Object.{is,assign,getOwnPropertySymbols,setPrototypeOf}
-exports.Object = {
-  is: isFunction(Object.is),
-  assign: isFunction(Object.assign),
-  getOwnPropertySymbols: isFunction(Object.getOwnPropertySymbols),
-  setPrototypeOf: isFunction(Object.setPrototypeOf)
-};
+// Object methods.
+var obj = {};
+['is','assign','getOwnPropertySymbols','setPrototypeOf'].forEach(function(attr){
+  obj[attr] = isFunction(Object[attr]);
+});
 
 // String methods.
-exports.String = {
-  raw: isFunction(String.raw),
-  fromCodePoint: isFunction(String.fromCodePoint),
-  prototype:{
-    codePointAt: isFunction(String.prototype.codePointAt),
-    normalize: isFunction(String.prototype.normalize),
-    repeat: isFunction(String.prototype.repeat),
-    startsWith: isFunction(String.prototype.startsWith),
-    endsWith: isFunction(String.prototype.endsWith),
-    contains: isFunction(String.prototype.contains)
-  }
-};
-
-exports.Number = {
-  isFinite: isFunction(Number.isFinite),
-  isInteger: isFunction(Number.isInteger),	
-  isSafeInteger: isFunction(Number.isSafeInteger),
-  isNaN: isFunction(Number.isNaN),
-  EPSILON: isNumber(Number.EPSILON),
-  MIN_SAFE_INTEGER: isNumber(Number.MIN_SAFE_INTEGER),
-  MAX_SAFE_INTEGER: isNumber(Number.MAX_SAFE_INTEGER)
-};
-
-exports.Math = {
-  clz32: isFunction(Math.clz32),
-  imul: isFunction(Math.imul),
-  sign: isFunction(Math.sign),
-  log10: isFunction(Math.log10),
-  log2: isFunction(Math.log2),
-  log1p: isFunction(Math.log1p),
-  expm1: isFunction(Math.expm1),
-  cosh: isFunction(Math.cosh),
-  sinh: isFunction(Math.sinh),
-  tanh: isFunction(Math.tanh),	
-  acosh: isFunction(Math.acosh),	
-  asinh: isFunction(Math.asinh),	
-  atanh: isFunction(Math.atanh),
-  hypot: isFunction(Math.hypot),	
-  trunc: isFunction(Math.trunc),	
-  fround: isFunction(Math.fround),	
-  cbrt: isFunction(Math.cbrt)
-};
-
-exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);
-
-var RegExp = {'prototype' : {} };
-['match', 'replace', 'split', 'search'].forEach(function(regex){
-   RegExp.prototype[regex] = isFunction(regex);
+var str = { prototype: {} };
+['raw','fromCodePoint'].forEach(function(attr){
+  str[attr] = isFunction(String[attr]);
 });
-exports.RegExp = RegExp;
+['codePointAt','normalize','repeat','startsWith','endsWith','contains'].forEach(function(attr){
+  str.prototype[attr] = isFunction(String.prototype[attr]);
+});
+
+// Number methods.
+var num = {};
+[
+ 'isFinite','isInteger','isSafeInteger','isNaN',
+ 'EPSILON','MIN_SAFE_INTEGER','MAX_SAFE_INTEGER'
+].forEach(function(attr){
+  num[attr] = isFunction(Number[attr]);
+});
+
+// Math methods.
+var math = {}
+"clz32,imul,sign,log10,log2,log1p,expm1,cosh,sinh,tanh,acosh,sinh,tanh,acosh,asinh,atanh,hypot,trunc,fround,cbrt"
+.split(",")
+.forEach(function(attr){
+  math[attr] = isFunction(Math[attr]);
+});
+
+// RegExp methods.
+var regex = {'prototype' : {} };
+['match', 'replace', 'split', 'search'].forEach(function(attr){
+   regex.prototype[attr] = isFunction(RegExp[attr]);
+});
+
+
+// Export them all
+exports.Object = obj;
+exports.String = str;
+exports.Number = num;
+exports.Math = math;
+exports.RegExp = regex;
+exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);

@@ -204,7 +204,7 @@ describe('enable.test.js', function () {
       enable.Number.EPSILON.should.equal(false);
     }
     if (process.version.indexOf('v0.11.') === 0) {
-      enable.Number.EPSILON.should.equal(true);
+      enable.Number.EPSILON.should.equal(false);
     }
   });
 
@@ -214,7 +214,7 @@ describe('enable.test.js', function () {
       enable.Number.MIN_SAFE_INTEGER.should.equal(false);
     }
     if (process.version.indexOf('v0.11.') === 0) {
-      enable.Number.MIN_SAFE_INTEGER.should.equal(true);
+      enable.Number.MIN_SAFE_INTEGER.should.equal(false);
     }
   });
 
