@@ -1,4 +1,8 @@
 
+2.1.0 / 2014-11-17
+==================
+* HTML methods of String.prototype (@hemanth).
+
 2.0.0 / 2014-11-16
 ==================
 * Regex realted methods.
