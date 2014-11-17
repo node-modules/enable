@@ -158,6 +158,16 @@ describe('enable.test.js', function () {
     }
   });
 
+  it("should detect HTML methods of String.prototype", function(){
+  	[
+  	  'anchor','big','bold','fixed','fontcolor','fontsize','italics', 
+  	  'link', 'small', 'strike', 'sub', 'sup'
+  	].forEach(function(attr){
+       enable.String.prototype[attr].should.be.a.Boolean;
+       enable.String.prototype[attr].should.equal(true);
+  	});
+  });
+
   it("should detect Number.isFinite", function(){
   	enable.Number.isFinite.should.be.a.Boolean;
   	if (process.version.indexOf('v0.10.') === 0) {
