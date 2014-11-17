@@ -1,7 +1,7 @@
 {
   "name": "enable",
   "version": "2.1.0",
-  "description": "Detect es6 features enable or not.",
+  "description": "ES6 and ES7 feature detection.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --harmony --check-leaks -R spec -t 5000 -r should test/*.test.js",
@@ -34,6 +34,8 @@
   "keywords": [
     "enable",
     "es6",
+    "es7",
+    "detect",
     "generator"
   ],
   "engines": {
