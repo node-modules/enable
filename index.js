@@ -65,7 +65,17 @@ var str = { prototype: {} };
 ['raw','fromCodePoint'].forEach(function(attr){
   str[attr] = isFunction(String[attr]);
 });
+
+// Prototype methods of Strings.
 ['codePointAt','normalize','repeat','startsWith','endsWith','contains'].forEach(function(attr){
+  str.prototype[attr] = isFunction(String.prototype[attr]);
+});
+
+// String.prototype HTML methods.
+[
+  'anchor','big','bold','fixed','fontcolor','fontsize','italics', 
+  'link', 'small', 'strike', 'sub', 'sup'
+].forEach(function(attr){
   str.prototype[attr] = isFunction(String.prototype[attr]);
 });
 

@@ -68,6 +68,18 @@ __String realted:__
 * String.prototype.startsWith
 * String.prototype.endsWith
 * String.prototype.contains
+* String.prototype.anchor
+* String.prototype.big
+* String.prototype.bold
+* String.prototype.fixed
+* String.prototype.fontcolor
+* String.prototype.fontsize
+* String.prototype.italics
+* String.prototype.link
+* String.prototype.small
+* String.prototype.strike
+* String.prototype.sub
+* String.prototype.sup
 
 __Number realted:__
 
@@ -104,6 +116,7 @@ __Others:__
 * let.
 * const.
 * Promise.
+* RegExp.
 
 ## Test
 
