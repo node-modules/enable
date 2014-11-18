@@ -24,6 +24,10 @@ function isNumber(attr) {
   return typeof attr === 'number';
 }
 
+function isDefined(attr) {
+  return typeof attr === 'undefined';
+}
+
 /**
  * Module dependencies.
  */
@@ -102,6 +106,15 @@ var regex = {'prototype' : {} };
    regex.prototype[attr] = isFunction(RegExp[attr]);
 });
 
+// Reflect methods.
+var reflect = {};
+(typeof Reflect !== 'undefined') && [
+  'get','set','has','deleteProperty','getOwnPropertyDescriptor',
+  'defineProperty','getPrototypeOf','setPrototypeOf','isExtensible',
+  'preventExtensions','enumerate','ownKeys','apply','construct'
+].forEach(function(attr){
+    reflect[attr] = isFunction(Reflect[attr]);
+});
 
 // Export them all
 exports.Object = obj;
@@ -109,4 +122,5 @@ exports.String = str;
 exports.Number = num;
 exports.Math = math;
 exports.RegExp = regex;
+exports.Reflect = reflect;
 exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);

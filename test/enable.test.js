@@ -448,4 +448,15 @@ describe('enable.test.js', function () {
     }
   });
 
+  it("should detect Reflect methods", function(){
+  	[
+  	  'get','set','has','deleteProperty','getOwnPropertyDescriptor',
+  	  'defineProperty','getPrototypeOf','setPrototypeOf','isExtensible',
+  	  'preventExtensions','enumerate','ownKeys','apply','construct'
+  	].forEach(function(attr){
+  	    (enable.Reflect[attr] || false).should.be.a.Boolean;
+  	    (enable.Reflect[attr] || false).should.equal(false);
+  	});
+  })
+
 });
