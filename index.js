@@ -102,6 +102,9 @@ var regex = {'prototype' : {} };
    regex.prototype[attr] = isFunction(RegExp[attr]);
 });
 
+// Function methods.
+var func = {'prototype': {}};
+func.prototype.toMethod = isFunction(Function.prototype.toMethod);
 
 // Export them all
 exports.Object = obj;
@@ -110,3 +113,4 @@ exports.Number = num;
 exports.Math = math;
 exports.RegExp = regex;
 exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);
+exports.Function = func;

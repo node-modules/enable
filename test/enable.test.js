@@ -448,4 +448,14 @@ describe('enable.test.js', function () {
     }
   });
 
+  it("should detect Function.prototype.toMethod", function(){
+    enable.Function.prototype.toMethod.should.be.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.Function.prototype.toMethod.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Function.prototype.toMethod.should.equal(false);
+    }
+  });
+
 });
