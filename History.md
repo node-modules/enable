@@ -1,3 +1,10 @@
+2.2.0 / 2014-11-19
+==================
+* Function.prototype.toMethod
+* RegExp.prototype.match
+* RegExp.prototype.replace
+* RegExp.prototype.split
+* RegExp.prototype.search
 
 2.1.0 / 2014-11-17
 ==================
