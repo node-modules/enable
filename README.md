@@ -110,13 +110,19 @@ __Math realted:__
 * Math.fround
 * Math.cbrt
 
+__RefExp methods:__
+
+* RegExp.prototype.match
+* RegExp.prototype.replace
+* RegExp.prototype.split
+* RegExp.prototype.search
+
 __Others:__
 
 * generator.
 * let.
 * const.
 * Promise.
-* RegExp.
 
 ## Test
 
