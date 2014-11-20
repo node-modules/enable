@@ -123,6 +123,7 @@ __Others:__
 * let.
 * const.
 * Promise.
+* class.
 
 ## Test
 
