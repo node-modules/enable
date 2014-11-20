@@ -458,4 +458,14 @@ describe('enable.test.js', function () {
     }
   });
 
+  it("should detect class", function(){
+    enable.class.should.be.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.class.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.class.should.equal(false);
+    }
+  });
+
 });

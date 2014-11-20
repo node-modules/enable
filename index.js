@@ -106,6 +106,15 @@ var regex = {'prototype' : {} };
 var func = {'prototype': {}};
 func.prototype.toMethod = isFunction(Function.prototype.toMethod);
 
+// class.
+var klass = (function(){
+  try {
+  	return Function("\nclass Cat {}\nreturn typeof Cat === \"function\";\n      ")();
+  } catch(e){
+  	return false;
+  }
+}());
+
 // Export them all
 exports.Object = obj;
 exports.String = str;
@@ -114,3 +123,4 @@ exports.Math = math;
 exports.RegExp = regex;
 exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);
 exports.Function = func;
+exports.class = klass;
