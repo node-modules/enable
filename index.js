@@ -109,9 +109,9 @@ func.prototype.toMethod = isFunction(Function.prototype.toMethod);
 // class.
 var klass = (function(){
   try {
-  	return Function("\nclass Cat {}\nreturn typeof Cat === \"function\";\n      ")();
+    return Function("\nclass Cat {}\nreturn typeof Cat === \"function\";\n      ")();
   } catch(e){
-  	return false;
+    return false;
   }
 }());
 
