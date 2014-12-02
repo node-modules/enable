@@ -56,7 +56,10 @@ try {
 
 // Object methods.
 var obj = {};
-['is','assign','getOwnPropertySymbols','setPrototypeOf'].forEach(function(attr){
+[
+  'is','assign','getOwnPropertySymbols','setPrototypeOf',
+  'getOwnPropertyDescriptors','observe'
+].forEach(function(attr){
   obj[attr] = isFunction(Object[attr]);
 });
 

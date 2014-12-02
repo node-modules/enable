@@ -78,6 +78,26 @@ describe('enable.test.js', function () {
     }
   });
 
+  it("should detect Object.observe", function(){
+    enable.Object.observe.should.be.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.Object.observe.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Object.observe.should.equal(true);
+    }
+  });
+
+  it("should detect Object.getOwnPropertyDescriptors", function(){
+    enable.Object.getOwnPropertyDescriptors.should.be.Boolean;
+    if (process.version.indexOf('v0.10.') === 0) {
+      enable.Object.getOwnPropertyDescriptors.should.equal(false);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      enable.Object.getOwnPropertyDescriptors.should.equal(false);
+    }
+  });
+
   it("should detect String.raw", function() {
     enable.String.raw.should.be.a.Boolean;
     if (process.version.indexOf('v0.10.') === 0) {
