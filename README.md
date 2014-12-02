@@ -57,6 +57,8 @@ __Object related:__
 * Object.assign
 * Object.getOwnPropertySymbols
 * Object.setPrototypeOf
+* Object.observe
+* Object.Object.getOwnPropertyDescriptors
 
 __String realted:__
 
