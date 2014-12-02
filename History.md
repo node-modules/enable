@@ -1,3 +1,8 @@
+2.3.0 / 2014-12-02
+==================
+* ES7 Object methods.
+
+
 2.2.0 / 2014-11-19
 ==================
 * Function.prototype.toMethod
