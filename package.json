@@ -1,6 +1,6 @@
 {
   "name": "enable",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "ES6 and ES7 feature detection.",
   "main": "index.js",
   "scripts": {
