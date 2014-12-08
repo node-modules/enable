@@ -129,7 +129,7 @@ var map = (function(){
     ].forEach(function(attr){
       map.prototype[attr] = isFunction(Map.prototype[attr]);
     });
-    map.prototype['size'] = !~~Object.getOwnPropertyDescriptor(Map.prototype,'size')
+    map.prototype['size'] = !!Object.getOwnPropertyDescriptor(Map.prototype,'size')
     return map;
   } else {
     return false;
