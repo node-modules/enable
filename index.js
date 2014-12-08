@@ -17,7 +17,7 @@
 */
 
 function isFunction(attr) {
-  return typeof attr === 'function';
+  return  Object.prototype.toString.call(attr) === '[object Function]'
 }
 
 function isNumber(attr) {
