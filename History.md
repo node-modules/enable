@@ -1,3 +1,8 @@
+2.3.1 / 2014-12-08
+==================
+* Better `isFunction` check.
+* s/realted/related README.md
+
 2.3.0 / 2014-12-02
 ==================
 * ES7 Object methods.
