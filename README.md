@@ -60,7 +60,7 @@ __Object related:__
 * Object.observe
 * Object.Object.getOwnPropertyDescriptors
 
-__String realted:__
+__String related:__
 
 * String.raw
 * String.fromCodePoint
@@ -83,7 +83,7 @@ __String realted:__
 * String.prototype.sub
 * String.prototype.sup
 
-__Number realted:__
+__Number related:__
 
 * Number.isFinite
 * Number.isInteger
@@ -92,7 +92,7 @@ __Number realted:__
 * Number.EPSILON
 * Number.MIN_SAFE_INTEGER
 
-__Math realted:__
+__Math related:__
 
 * Math.clz32
 * Math.imul
