@@ -180,7 +180,7 @@ describe('enable.test.js', function () {
 
   it("should detect HTML methods of String.prototype", function(){
   	[
-  	  'anchor','big','bold','fixed','fontcolor','fontsize','italics', 
+  	  'anchor','big','bold','fixed','fontcolor','fontsize','italics',
   	  'link', 'small', 'strike', 'sub', 'sup'
   	].forEach(function(attr){
        enable.String.prototype[attr].should.be.a.Boolean;
@@ -488,4 +488,106 @@ describe('enable.test.js', function () {
     }
   });
 
+  it("should detect Map", function(){
+    enable.Map.should.be.Object;
+    if (process.version.indexOf('v0.10.') === 0) {
+      Object.keys(enable.Map).length.should.equal(1);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      Object.keys(enable.Map).length.should.equal(1);
+    }
+  });
+
+  if(enable.Map) {
+    it("should detect Map.prototype.size", function() {
+        enable.Map.prototype.size.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.size.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.size.should.equal(true);
+        }
+    });
+    it("should detect Map.prototype.get", function() {
+        enable.Map.prototype.get.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.get.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.get.should.equal(true);
+        }
+    });
+    it("should detect Map.prototype.has", function() {
+        enable.Map.prototype.has.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.has.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.has.should.equal(true);
+        }
+    });
+    it("should detect Map.prototype.set", function() {
+        enable.Map.prototype.set.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.set.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.set.should.equal(true);
+        }
+    });
+    it("should detect Map.prototype.delete", function() {
+        enable.Map.prototype.delete.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.delete.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.delete.should.equal(true);
+        }
+    });
+    it("should detect Map.prototype.keys", function() {
+        enable.Map.prototype.keys.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.keys.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.keys.should.equal(false);
+        }
+    });
+    it("should detect Map.prototype.values", function() {
+        enable.Map.prototype.values.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.values.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.values.should.equal(false);
+        }
+    });
+    it("should detect Map.prototype.clear", function() {
+        enable.Map.prototype.clear.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.clear.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.clear.should.equal(true);
+        }
+    });
+    it("should detect Map.prototype.forEach", function() {
+        enable.Map.prototype.forEach.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.forEach.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.forEach.should.equal(true);
+        }
+    });
+    it("should detect Map.prototype.entries", function() {
+        enable.Map.prototype.entries.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Map.prototype.entries.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Map.prototype.entries.should.equal(false);
+        }
+    });
+  }
 });

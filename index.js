@@ -76,7 +76,7 @@ var str = { prototype: {} };
 
 // String.prototype HTML methods.
 [
-  'anchor','big','bold','fixed','fontcolor','fontsize','italics', 
+  'anchor','big','bold','fixed','fontcolor','fontsize','italics',
   'link', 'small', 'strike', 'sub', 'sup'
 ].forEach(function(attr){
   str.prototype[attr] = isFunction(String.prototype[attr]);
@@ -118,6 +118,24 @@ var klass = (function(){
   }
 }());
 
+// Map.
+var map = (function(){
+  if(isFunction(Map)){
+    var map = { 'prototype': {} };
+    [
+      "get", "has", "set",
+      "delete", "keys", "values",
+      "clear", "forEach", "entries"
+    ].forEach(function(attr){
+      map.prototype[attr] = isFunction(Map.prototype[attr]);
+    });
+    map.prototype['size'] = !~~Object.getOwnPropertyDescriptor(Map.prototype,'size')
+    return map;
+  } else {
+    return false;
+  }
+}());
+
 // Export them all
 exports.Object = obj;
 exports.String = str;
@@ -127,3 +145,4 @@ exports.RegExp = regex;
 exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);
 exports.Function = func;
 exports.class = klass;
+exports.Map = map;
