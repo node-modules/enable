@@ -1,3 +1,7 @@
+3.0.0 / 2014-12-09
+==================
+* All Map realted checks.
+
 2.3.1 / 2014-12-08
 ==================
 * Better `isFunction` check.
