@@ -119,6 +119,20 @@ __RefExp methods:__
 * RegExp.prototype.split
 * RegExp.prototype.search
 
+__Map related:__
+
+* Map 
+* Map.prototype.size 
+* Map.prototype.get 
+* Map.prototype.has 
+* Map.prototype.set 
+* Map.prototype.delete 
+* Map.prototype.keys 
+* Map.prototype.values 
+* Map.prototype.clear 
+* Map.prototype.forEach
+* Map.prototype.entries 
+
 __Others:__
 
 * generator.
