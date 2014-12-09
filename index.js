@@ -136,6 +136,23 @@ var map = (function(){
   }
 }());
 
+//WeakMap.
+var wm = (function(){
+  if(isFunction(WeakMap)){
+    var wm = { 'prototype': {} };
+    [
+      "constructor", "get", "set",
+      "has", "delete", "clear"
+    ].forEach(function(attr){
+        wm.prototype[attr] = isFunction(WeakMap.prototype[attr]);
+    });
+    wm.length = isNumber(WeakMap.length);
+    return wm;
+  } else {
+    return false;
+  }
+}());
+
 // Export them all
 exports.Object = obj;
 exports.String = str;
@@ -146,3 +163,4 @@ exports.Promise = typeof Promise !== 'undefined' && isFunction(Promise.all);
 exports.Function = func;
 exports.class = klass;
 exports.Map = map;
+exports.WeakMap = wm;

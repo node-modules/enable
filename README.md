@@ -133,6 +133,17 @@ __Map related:__
 * Map.prototype.forEach
 * Map.prototype.entries 
 
+__WeakMap related:__
+
+* WeakMap
+* WeakMap.length
+* WeakMap.prototype.constructor
+* WeakMap.prototype.get
+* WeakMap.prototype.set
+* WeakMap.prototype.has
+* WeakMap.prototype.delete
+* WeakMap.prototype.clear
+
 __Others:__
 
 * generator.
