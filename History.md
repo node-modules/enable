@@ -1,3 +1,8 @@
+
+3.1.0/ 2014-12-09
+==================
+* All WeakMap related checks.
+
 3.0.0 / 2014-12-09
 ==================
 * All Map realted checks.
