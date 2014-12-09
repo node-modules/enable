@@ -590,4 +590,80 @@ describe('enable.test.js', function () {
         }
     });
   }
+
+  it("should detect WeakMap", function(){
+    enable.WeakMap.should.be.Object;
+    if (process.version.indexOf('v0.10.') === 0) {
+      Object.keys(enable.WeakMap).length.should.equal(2);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      Object.keys(enable.WeakMap).length.should.equal(2);
+    }
+  });
+
+  if(enable.WeakMap){
+    it("should detect WeakMap.length", function() {
+        enable.WeakMap.length.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.WeakMap.length.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.WeakMap.length.should.equal(true);
+        }
+    });
+    it("should detect WeakMap.prototype.constructor", function() {
+        enable.WeakMap.prototype.constructor.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.WeakMap.prototype.constructor.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.WeakMap.prototype.constructor.should.equal(true);
+        }
+    });
+    it("should detect WeakMap.prototype.get", function() {
+        enable.WeakMap.prototype.get.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.WeakMap.prototype.get.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.WeakMap.prototype.get.should.equal(true);
+        }
+    });
+    it("should detect WeakMap.prototype.set", function() {
+        enable.WeakMap.prototype.set.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.WeakMap.prototype.set.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.WeakMap.prototype.set.should.equal(true);
+        }
+    });
+    it("should detect WeakMap.prototype.has", function() {
+        enable.WeakMap.prototype.has.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.WeakMap.prototype.has.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.WeakMap.prototype.has.should.equal(true);
+        }
+    });
+    it("should detect WeakMap.prototype.delete", function() {
+        enable.WeakMap.prototype.delete.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.WeakMap.prototype.delete.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.WeakMap.prototype.delete.should.equal(true);
+        }
+    });
+    it("should detect WeakMap.prototype.clear", function() {
+        enable.WeakMap.prototype.clear.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.WeakMap.prototype.clear.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.WeakMap.prototype.clear.should.equal(true);
+        }
+    });
+  }
 });
