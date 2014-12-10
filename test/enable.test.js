@@ -666,4 +666,107 @@ describe('enable.test.js', function () {
         }
     });
   }
+
+  it("should detect Set", function(){
+    enable.Set.should.be.Object;
+    if (process.version.indexOf('v0.10.') === 0) {
+      Object.keys(enable.Set).length.should.equal(1);
+    }
+    if (process.version.indexOf('v0.11.') === 0) {
+      Object.keys(enable.Set).length.should.equal(1);
+    }
+  });
+
+  if(enable.Set){
+    it("should detect Set.prototype.constructor", function() {
+        enable.Set.prototype.constructor.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.constructor.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.constructor.should.equal(true);
+        }
+    });
+    it("should detect Set.prototype.size", function() {
+        enable.Set.prototype.size.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.size.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.size.should.equal(true);
+        }
+    });
+    it("should detect Set.prototype.add", function() {
+        enable.Set.prototype.add.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.add.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.add.should.equal(true);
+        }
+    });
+    it("should detect Set.prototype.has", function() {
+        enable.Set.prototype.has.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.has.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.has.should.equal(true);
+        }
+    });
+    it("should detect Set.prototype.delete", function() {
+        enable.Set.prototype.delete.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.delete.should.equal(true);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.delete.should.equal(true);
+        }
+    });
+    it("should detect Set.prototype.clear", function() {
+        enable.Set.prototype.clear.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.clear.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.clear.should.equal(true);
+        }
+    });
+    it("should detect Set.prototype.forEach", function() {
+        enable.Set.prototype.forEach.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.forEach.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.forEach.should.equal(true);
+        }
+    });
+    it("should detect Set.prototype.entries", function() {
+        enable.Set.prototype.entries.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.entries.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.entries.should.equal(false);
+        }
+    });
+    it("should detect Set.prototype.keys", function() {
+        enable.Set.prototype.keys.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.keys.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.keys.should.equal(false);
+        }
+    });
+    it("should detect Set.prototype.values", function() {
+        enable.Set.prototype.values.should.be.Boolean;
+        if (process.version.indexOf('v0.10.') === 0) {
+            enable.Set.prototype.values.should.equal(false);
+        }
+        if (process.version.indexOf('v0.11.') === 0) {
+            enable.Set.prototype.values.should.equal(false);
+        }
+    });
+  }
 });

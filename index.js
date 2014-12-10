@@ -153,6 +153,24 @@ var wm = (function(){
   }
 }());
 
+//Set.
+var set = (function(){
+  if(isFunction(Set)){
+    var set = { 'prototype': {} };
+    [
+      "constructor", "add",
+      "has", "delete", "clear",
+      "forEach", "entries", "keys", "values"
+    ].forEach(function(attr){
+        set.prototype[attr] = isFunction(Set.prototype[attr]);
+    });
+    set.prototype['size'] = !~~Object.getOwnPropertyDescriptor(Map.prototype,'size')
+    return set;
+  } else {
+    return false;
+  }
+}());
+
 // Export them all
 exports.Object = obj;
 exports.String = str;
@@ -164,3 +182,4 @@ exports.Function = func;
 exports.class = klass;
 exports.Map = map;
 exports.WeakMap = wm;
+exports.Set = set;
