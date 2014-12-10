@@ -144,6 +144,20 @@ __WeakMap related:__
 * WeakMap.prototype.delete
 * WeakMap.prototype.clear
 
+__Set related:__
+
+* Set
+* Set.prototype.constructor
+* Set.prototype.size
+* Set.prototype.add
+* Set.prototype.has
+* Set.prototype.delete
+* Set.prototype.clear
+* Set.prototype.forEach
+* Set.prototype.entries
+* Set.prototype.keys
+* Set.prototype.values
+
 __Others:__
 
 * generator.
