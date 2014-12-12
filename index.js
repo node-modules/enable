@@ -120,7 +120,7 @@ var klass = (function(){
 
 // Map.
 var map = (function(){
-  if(isFunction(Map)){
+  if(typeof Map !== 'undefined' && isFunction(Map)){
     var map = { 'prototype': {} };
     [
       "get", "has", "set",
@@ -138,7 +138,7 @@ var map = (function(){
 
 //WeakMap.
 var wm = (function(){
-  if(isFunction(WeakMap)){
+  if(typeof WeakMap !== 'undefined' && isFunction(WeakMap)){
     var wm = { 'prototype': {} };
     [
       "constructor", "get", "set",
@@ -155,7 +155,7 @@ var wm = (function(){
 
 //Set.
 var set = (function(){
-  if(isFunction(Set)){
+  if(typeof Set !== 'undefined' && isFunction(Set)){
     var set = { 'prototype': {} };
     [
       "constructor", "add",
@@ -171,6 +171,24 @@ var set = (function(){
   }
 }());
 
+//WeakSet.
+var ws = (function(){
+  if(typeof WeakSet !== 'undefined' && isFunction(WeakSet)){
+    var ws = { 'prototype': {} };
+    [
+      "constructor", "add",
+      "has", "delete", "clear"
+    ].forEach(function(attr){
+        ws.prototype[attr] = isFunction(WeakSet.prototype[attr]);
+    });
+    ws.length = isNumber(WeakMap.length);
+    return ws;
+  } else {
+    return false;
+  }
+}());
+
+
 // Export them all
 exports.Object = obj;
 exports.String = str;
@@ -183,3 +201,4 @@ exports.class = klass;
 exports.Map = map;
 exports.WeakMap = wm;
 exports.Set = set;
+exports.WeakSet = ws;
