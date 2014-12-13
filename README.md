@@ -158,6 +158,15 @@ __Set related:__
 * Set.prototype.keys
 * Set.prototype.values
 
+__WeakSet related:__
+
+* WeakSet
+* WeakSet.prototype.constructor
+* WeakSet.prototype.add
+* WeakSet.prototype.has
+* WeakSet.prototype.delete
+* WeakSet.prototype.clear
+
 __Others:__
 
 * generator.
