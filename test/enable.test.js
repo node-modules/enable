@@ -832,5 +832,86 @@ describe('enable.test.js', function () {
       }
     });
   }
+  it("should detect Array.from", function() {
+      enable.Array.from.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.from.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.from.should.equal(false);
+      }
+  });
+  it("should detect Array.of", function() {
+      enable.Array.of.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.of.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.of.should.equal(false);
+      }
+  });
+  it("should detect Array.prototype.copyWithin", function() {
+      enable.Array.prototype.copyWithin.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.prototype.copyWithin.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.prototype.copyWithin.should.equal(false);
+      }
+  });
+  it("should detect Array.prototype.find", function() {
+      enable.Array.prototype.find.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.prototype.find.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.prototype.find.should.equal(true);
+      }
+  });
+  it("should detect Array.prototype.findIndex", function() {
+      enable.Array.prototype.findIndex.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.prototype.findIndex.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.prototype.findIndex.should.equal(true);
+      }
+  });
+  it("should detect Array.prototype.fill", function() {
+      enable.Array.prototype.fill.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.prototype.fill.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.prototype.fill.should.equal(true);
+      }
+  });
+  it("should detect Array.prototype.keys", function() {
+      enable.Array.prototype.keys.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.prototype.keys.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.prototype.keys.should.equal(true);
+      }
+  });
+  it("should detect Array.prototype.values", function() {
+      enable.Array.prototype.values.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.prototype.values.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.prototype.values.should.equal(true);
+      }
+  });
+  it("should detect Array.prototype.entries", function() {
+      enable.Array.prototype.entries.should.be.Boolean;
+      if (process.version.indexOf('v0.10.') === 0) {
+          enable.Array.prototype.entries.should.equal(false);
+      }
+      if (process.version.indexOf('v0.11.') === 0) {
+          enable.Array.prototype.entries.should.equal(true);
+      }
+  });
 
 });
