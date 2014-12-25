@@ -167,6 +167,18 @@ __WeakSet related:__
 * WeakSet.prototype.delete
 * WeakSet.prototype.clear
 
+__Array related:__
+
+* Array.from
+* Array.of
+* Array.prototype.copyWithin
+* Array.prototype.find
+* Array.prototype.findIndex
+* Array.prototype.fill
+* Array.prototype.keys
+* Array.prototype.values
+* Array.prototype.entries
+
 __Others:__
 
 * generator.

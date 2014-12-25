@@ -188,6 +188,20 @@ var ws = (function(){
   }
 }());
 
+//Array.
+var array = (function(){
+  var array = { prototype : {} };
+  array.from = isFunction(Array.from);
+  array.of = isFunction(Array.of);
+  [
+    "copyWithin", "find", "findIndex",
+    "fill", "keys", "values", "entries"
+  ].forEach(function(attr){
+    array.prototype[attr] = isFunction(Array.prototype[attr]);
+  });
+  return array;
+}());
+
 
 // Export them all
 exports.Object = obj;
@@ -202,3 +216,4 @@ exports.Map = map;
 exports.WeakMap = wm;
 exports.Set = set;
 exports.WeakSet = ws;
+exports.Array = array;
