@@ -1,8 +1,11 @@
+3.3.0 / 2014-12-25
+==================
+* All Array related checks.
 
 3.2.0 / 2014-12-13
 ==================
-  * All WeakSet related checks.
-  * All Set related checks.
+* All WeakSet related checks.
+* All Set related checks.
 
 3.1.0/ 2014-12-09
 ==================
