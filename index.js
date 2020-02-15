@@ -1,15 +1,3 @@
-/**!
- * enable - index.js
- *
- * Copyright(c) 2014 fengmk2 and other contributors.
- * MIT Licensed
- *
- * Authors:
- *   fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)
- *   dead_horse <dead_horse@qq.com> (http://github.com/dead-horse)
- *   hemanth.hm <hemanth.hm@gmail.com> (http://h3manth.com)
- */
-
 'use strict';
 
 /**
@@ -24,10 +12,6 @@ function isNumber(attr) {
   return typeof attr === 'number';
 }
 
-/**
- * Module dependencies.
- */
-
 // generator
 
 try {
@@ -35,6 +19,33 @@ try {
   exports.generator = true;
 } catch (_) {
   exports.generator = false;
+}
+
+// arrow function
+
+try {
+  eval('(() => {})()');
+  exports.arrowFunction = true;
+} catch (_) {
+  exports.arrowFunction = false;
+}
+
+// async function
+
+try {
+  eval('(async function() {})()');
+  exports.asyncFunction = true;
+} catch (_) {
+  exports.asyncFunction = false;
+}
+
+// async arrow function
+
+try {
+  eval('(async () => {})()');
+  exports.asyncArrowFunction = true;
+} catch (_) {
+  exports.asyncArrowFunction = false;
 }
 
 // let
@@ -70,7 +81,7 @@ var str = { prototype: {} };
 });
 
 // Prototype methods of Strings.
-['codePointAt','normalize','repeat','startsWith','endsWith','contains'].forEach(function(attr){
+['codePointAt','normalize','repeat','startsWith','endsWith','contains','includes'].forEach(function(attr){
   str.prototype[attr] = isFunction(String.prototype[attr]);
 });
 

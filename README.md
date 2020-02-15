@@ -121,17 +121,17 @@ __RefExp methods:__
 
 __Map related:__
 
-* Map 
-* Map.prototype.size 
-* Map.prototype.get 
-* Map.prototype.has 
-* Map.prototype.set 
-* Map.prototype.delete 
-* Map.prototype.keys 
-* Map.prototype.values 
-* Map.prototype.clear 
+* Map
+* Map.prototype.size
+* Map.prototype.get
+* Map.prototype.has
+* Map.prototype.set
+* Map.prototype.delete
+* Map.prototype.keys
+* Map.prototype.values
+* Map.prototype.clear
 * Map.prototype.forEach
-* Map.prototype.entries 
+* Map.prototype.entries
 
 __WeakMap related:__
 
@@ -182,6 +182,9 @@ __Array related:__
 __Others:__
 
 * generator.
+* arrowFunction
+* asyncFunction
+* asyncArrowFunction
 * let.
 * const.
 * Promise.
