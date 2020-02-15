@@ -1,3 +1,14 @@
+
+3.4.0 / 2020-02-15
+==================
+
+**features**
+  * [[`d831d40`](http://github.com/node-modules/enable/commit/d831d404c749d0c73184c5357daf7fc6bed24d49)] - feat: detect arrow and async function (#28) (fengmk2 <<fengmk2@gmail.com>>)
+
+**others**
+  * [[`049d1b3`](http://github.com/node-modules/enable/commit/049d1b3f388371b55fdacb6bdf4d426224c40d30)] - Updated License. (hemanth.hm <<hemanth.hm@gmail.com>>)
+  * [[`0736fed`](http://github.com/node-modules/enable/commit/0736fedf9fe1b14e1729265eaeb94f038daf2dd0)] - Changelogs for v3.3.0 (Hemanth.HM <<hemanth.hm@gmail.com>>)
+  * [[`2af6043`](http://github.com/node-modules/enable/commit/2af6043b5a618f142dabc0d9da8c60b2df574629)] - 3.3.0 (Hemanth.HM <<hemanth.hm@gmail.com>>),
 3.3.0 / 2014-12-25
 ==================
 * All Array related checks.

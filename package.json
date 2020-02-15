@@ -1,8 +1,11 @@
 {
   "name": "enable",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "ES6 and ES7 feature detection.",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "mocha --check-leaks -R spec -t 5000 -r should test/*.test.js",
     "test-cov": "istanbul cover node_modules/.bin/_mocha -- --check-leaks -t 5000 -r should test/*.test.js",
@@ -40,6 +43,6 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)",
+  "author": "fengmk2 <fengmk2@gmail.com> (https://fengmk2.com)",
   "license": "MIT"
 }
